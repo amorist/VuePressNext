@@ -1,11 +1,13 @@
 <template>
-    <div class="post">
-        <ul>
-            <li v-for="p in post">
-                <a :href="p.path">{{ p.title }}</a>
-            </li>
-        </ul>
-    </div>
+  <div class="post">
+    <el-row :gutter="12">
+      <el-col :span="8">
+        <el-card v-for="p in post" class="box-card list" key="p.path">
+          <a :href="p.path">{{ p.title }}</a>
+        </el-card>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 <script>
 import dayjs from "dayjs";
@@ -35,3 +37,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.list {
+  margin: 20px;
+}
+</style>

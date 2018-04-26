@@ -1,6 +1,6 @@
 module.exports = {
-  title: "VuePress Blog",
-  description: "blog base VuePress",
+  title: "kiss amor",
+  description: "blog based VuePress",
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],

@@ -5,6 +5,7 @@
   },
   "devDependencies": {
     "dayjs": "^1.5.14",
+    "element-ui": "^2.3.6",
     "vuepress": "^0.8.4"
   }
 }

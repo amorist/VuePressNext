@@ -2,3 +2,4 @@
 node_modules
 posts
 !posts/index.md
+dist

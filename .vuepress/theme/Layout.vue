@@ -14,13 +14,15 @@
             <slot name="page-top" slot="top" />
             <slot name="page-bottom" slot="bottom" />
         </Page>
-        <Post v-if="$page.frontmatter.type == 'blog'"></Post>
+        <Post v-if="$page.frontmatter.blog"></Post>
     </div>
 </template>
 
 <script>
 import Vue from "vue";
 import nprogress from "nprogress";
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 import Home from "./Home.vue";
 import Navbar from "./Navbar.vue";
 import Page from "./Page.vue";
@@ -80,6 +82,7 @@ export default {
   },
 
   created() {
+    Vue.use(ElementUI);
     if (this.$ssrContext) {
       this.$ssrContext.title = this.$title;
       this.$ssrContext.lang = this.$lang;
