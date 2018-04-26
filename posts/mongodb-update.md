@@ -4,8 +4,6 @@ date: 2018-01-23
 post: true
 ---
 
-# {{$page.title}}
-
 ## version<2.2
 
 ```
