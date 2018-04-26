@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <Content :custom="false"/>
+    <Post/>
     <div class="content edit-link" v-if="editLink">
       <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
       <OutboundLink/>
@@ -25,10 +25,11 @@
 
 <script>
 import OutboundLink from './OutboundLink.vue'
+import Post from './Post.vue'
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
 
 export default {
-  components: { OutboundLink },
+  components: { OutboundLink, Post },
   props: ['sidebarItems'],
   computed: {
     prev () {

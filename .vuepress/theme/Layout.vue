@@ -14,7 +14,8 @@
             <slot name="page-top" slot="top" />
             <slot name="page-bottom" slot="bottom" />
         </Page>
-        <Post v-if="$page.frontmatter.blog"></Post>
+        <Blog v-if="$page.frontmatter.blog"></Blog>
+        <!-- <Post v-if="$page.frontmatter.post"></Post> -->
     </div>
 </template>
 
@@ -27,12 +28,13 @@ import Home from "./Home.vue";
 import Navbar from "./Navbar.vue";
 import Page from "./Page.vue";
 import Sidebar from "./Sidebar.vue";
+import Blog from "./Blog.vue";
 import Post from "./Post.vue";
 import { pathToComponentName } from "@app/util";
 import { resolveSidebarItems } from "./util";
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, Post },
+  components: { Home, Page, Sidebar, Navbar, Blog, Post},
   data() {
     return {
       isSidebarOpen: false,
