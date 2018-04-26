@@ -15,7 +15,7 @@
             <slot name="page-bottom" slot="bottom" />
         </Page>
         <Blog v-if="$page.frontmatter.blog"></Blog>
-        <!-- <Post v-if="$page.frontmatter.post"></Post> -->
+        <Admin v-if="$page.frontmatter.admin"></Admin>
     </div>
 </template>
 
@@ -29,12 +29,12 @@ import Navbar from "./Navbar.vue";
 import Page from "./Page.vue";
 import Sidebar from "./Sidebar.vue";
 import Blog from "./Blog.vue";
-import Post from "./Post.vue";
+import Admin from "./Admin.vue";
 import { pathToComponentName } from "@app/util";
 import { resolveSidebarItems } from "./util";
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, Blog, Post},
+  components: { Home, Page, Sidebar, Navbar, Blog, Admin},
   data() {
     return {
       isSidebarOpen: false,
