@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "devDependencies": {
+    "dayjs": "^1.5.14",
+    "vuepress": "^0.8.4"
+  }
+}
